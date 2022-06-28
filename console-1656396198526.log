@@ -1,0 +1,133 @@
+var a;
+undefined
+typeof a;
+'undefined'
+a =100;
+100
+typeof a;
+'number'
+a=10000000;
+10000000
+typeof a;
+'number'
+a=900.29;
+900.29
+typeof a;
+'number'
+a= "AMIT";
+'AMIT'
+typeof a;
+'string'
+a = true;
+true
+typeof a;
+'boolean'
+a= Number.MAX_SAFE_INTEGER;
+9007199254740991
+a++;
+9007199254740991
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a=9007199254740992n;
+9007199254740992n
+typeof a;
+'bigint'
+a++;
+9007199254740992n
+a++;
+9007199254740993n
+a++;
+9007199254740994n
+a++;
+9007199254740995n
+a++;
+9007199254740996n
+a++;
+9007199254740997n
+a= 1000n;
+1000n
+var b = 2000n;
+undefined
+a+b;
+3000n
+a + 666;
+VM732:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:3
+(anonymous) @ VM732:1
+var a = 109008954656546n;
+undefined
+var b = "765378658734658763478564387567834";
+undefined
+var c = BigInt(b);
+undefined
+c;
+765378658734658763478564387567834n
+var products = ["apple","orange","mango"];
+undefined
+typeof products;
+'object'
+products instanceof Array;
+true
+typeof Array;
+'function'
+products=null;
+null
+typeof products;
+'object'
+products;
+null
+var emp = {id : 1001, name:'Ram', salary:11111, age:21};
+undefined
+products[2];
+VM1419:1 Uncaught TypeError: Cannot read properties of null (reading '2')
+    at <anonymous>:1:9
+(anonymous) @ VM1419:1
+var products = ["apple","orange","mango"];
+undefined
+products[2];
+'mango'
+emp;
+{id: 1001, name: 'Ram', salary: 11111, age: 21}
+emp['id'];
+1001
+emp['name'];
+'Ram'
+typeof emp;
+'object'
+products instanceof Array;
+true
+emp instanceof Array;
+false
+emp instanceof Object;
+true
+typeof Object;
+'function'
+typeof Array;
+'function'
+var q = 1000n;
+undefined
+typeof q;
+'bigint'
+BigInt("1000");
+1000n
+typeof BigInt;
+'function'
+function show(){
+    console.log("I am the Function ");
+}
+undefined
+typeof show;
+'function'
+show();
+VM2019:2 I am the Function 
+undefined
