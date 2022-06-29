@@ -1,0 +1,125 @@
+function show(){
+    console.log("I am Show ");
+}
+undefined
+show();
+VM155:2 I am Show 
+undefined
+function show(){
+    console.log("I am Show ");
+    return 100;
+}
+undefined
+show();
+VM221:2 I am Show 
+100
+function add(){
+    console.log("I am the Add Fn ");
+}
+undefined
+add();
+VM430:2 I am the Add Fn 
+undefined
+add(10,20);
+VM430:2 I am the Add Fn 
+undefined
+add(10,20,30,40,50,60);
+VM430:2 I am the Add Fn 
+undefined
+function add(){
+    console.log("I am the Add Fn ", arguments);
+}
+undefined
+add(10,20,30,40,50,60);
+VM664:2 I am the Add Fn  Arguments(6) [10, 20, 30, 40, 50, 60, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+undefined
+console.dir(add);
+VM734:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM664:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function add(){
+   // console.log("I am the Add Fn ", arguments);
+    var sum = 0;
+    for(var i = 0; i<arguments.length ; i++){
+    sum = sum + arguments[i];
+}
+    return sum;
+}
+undefined
+add();
+0
+add(1,2,3,4,5,6);
+21
+add(10,20,30);
+60
+add(10,20,30,40,50,60,70);
+280
+add(10,20,30,40,"50",60,70,"Ok");
+'100506070Ok'
+parseInt("100");
+100
+function add(){
+   // console.log("I am the Add Fn ", arguments);
+    var sum = 0;
+    for(var i = 0; i<arguments.length ; i++){
+    sum = sum + parseInt(arguments[i]);
+}
+    return sum;
+}
+undefined
+add(10,20,30,40,"50",60,70);
+280
+add(10,20,30,40,"50",60,70,"Ok");
+NaN
+parseInt("OK");
+NaN
+isNaN(parseInt("Ok"))
+true
+isNaN(parseInt("Ok"))?0:1;
+0
+function add(){
+   // console.log("I am the Add Fn ", arguments);
+    var sum = 0;
+    for(var i = 0; i<arguments.length ; i++){
+    sum = sum + (isNaN(parseInt(arguments[i]))?0;parseInt(arguments[i]));
+}
+    return sum;
+}
+VM1707:5 Uncaught SyntaxError: Unexpected token ';'
+function add(){
+   // console.log("I am the Add Fn ", arguments);
+    var sum = 0;
+    for(var i = 0; i<arguments.length ; i++){
+    sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+}
+    return sum;
+}
+undefined
+add(10,20,30,40,"50",60,70,"Ok");
+280
+function add(...arg){
+   // console.log("I am the Add Fn ", arguments);
+    var sum = 0;
+    for(var i = 0; i<arg.length ; i++){
+    sum = sum + (isNaN(parseInt(arg[i]))?0:parseInt(arg[i]));
+}
+    return sum;
+}
+undefined
+add(10,20,30,40,"50",60,70,"Ok");
+280
+var arr = [10,20,30];
+undefined
+var arr2 = [90,100,20];
+undefined
+var arr3= [arr, arr2];
+undefined
+arr3;
+(2) [Array(3), Array(3)]0: (3) [10, 20, 30]1: (3) [90, 100, 20]length: 2[[Prototype]]: Array(0)
+arr.push(10000);
+4
+arr;
+(4) [10, 20, 30, 10000]
+arr3;
+(2) [Array(4), Array(3)]0: (4) [10, 20, 30, 10000]1: (3) [90, 100, 20]length: 2[[Prototype]]: Array(0)
+arr3 = [...arr, ...arr2];
+(7) [10, 20, 30, 10000, 90, 100, 20]
