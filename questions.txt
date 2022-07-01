@@ -1,0 +1,15 @@
+Recursion
+1. N Natural Number Sum
+1 + 2 + 3 + 4 + N - Return the Sum
+
+2. 1 ^1 + 2 ^ 2 + 3 ^3 
+a) Print the Series (One Fn)
+b) Sum of the Series (Second Fn)
+
+3. 2 ^ 5 = 32
+
+4. 123 = 1+2+3 (Sum of Digit) (Hint % and / operator)
+
+5. 1234 = Sum of Even Digit and Sum of Odd Digit
+
+6. 1234 = Sum of Even Place Digit and Sum of Odd Place Digit
